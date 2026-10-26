@@ -1,0 +1,15 @@
+{
+  "name": "pengeluaran-app",
+  "version": "1.0.0",
+  "description": "Aplikasi pencatat pengeluaran (CRUD) dengan Node.js dan MongoDB",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "mongodb": "6.10.0"
+  }
+}

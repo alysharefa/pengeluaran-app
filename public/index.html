@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pengeluaran · __OWNER__</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Pencatat Pengeluaran</h1>
+      <p class="owner">Dikelola oleh __OWNER__</p>
+    </header>
+
+    <section class="summary" aria-live="polite">
+      <div>
+        <span class="label">Total pengeluaran</span>
+        <strong id="total">Rp 0</strong>
+      </div>
+      <span id="count" class="count">0 transaksi</span>
+    </section>
+
+    <form id="form" class="panel" autocomplete="off">
+      <div class="field wide">
+        <label for="keterangan">Keterangan</label>
+        <input type="text" id="keterangan" maxlength="100" required placeholder="Contoh: makan siang">
+      </div>
+      <div class="field">
+        <label for="kategori">Kategori</label>
+        <select id="kategori">
+          <option>Makanan</option>
+          <option>Transportasi</option>
+          <option>Belanja</option>
+          <option>Tagihan</option>
+          <option>Lainnya</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="jumlah">Jumlah (Rp)</label>
+        <input type="number" id="jumlah" min="1" step="1" required inputmode="numeric" placeholder="25000">
+      </div>
+      <div class="actions wide">
+        <button type="submit" id="submit" class="btn">Tambah pengeluaran</button>
+        <button type="button" id="cancel" class="btn quiet" hidden>Batal</button>
+      </div>
+    </form>
+
+    <p id="message" class="message" role="alert" hidden></p>
+
+    <h2>Riwayat</h2>
+    <ul id="list" class="list"></ul>
+    <p id="empty" class="empty" hidden>Belum ada pengeluaran. Isi form di atas untuk mencatat yang pertama.</p>
+  </main>
+</body>
+</html>
